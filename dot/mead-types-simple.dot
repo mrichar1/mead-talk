@@ -1,0 +1,38 @@
+digraph twopi {
+
+graph [
+  size="6,6"
+  dpi=100
+  ranksep=3
+  bgcolor=transparent
+]
+
+node [
+  shape=hexagon
+  style = filled
+  fillcolor=goldenrod1
+  fixedsize=shape
+  width=2.5
+  height=1.5
+  fontname="Times-Roman"
+  fontsize=28
+]
+
+edge [color=grey]
+// Drinks
+MEAD
+Braggot [label=<Braggot<br/><i>Grains</i>>]
+Sack [label=<Sack<br/><i>High %</i>>]
+Short [label=<Short<br/><i>Low %</i>>]
+Bochet [label=<Bochet<br/><i>Boiled</i>>]
+Hippocras [label=<Hippocras<br/><i>Mulled</i>>]
+Melomel  [label=<Melomel<br/><i>Fruit</i>>]
+Pyment [label=<Pyment<br/><i>Grapes</i>>]
+Cyser [label=<Cyser<br/><i>Apples</i>>]
+Metheglin [label=<Metheglin<br/><i>Herb/Spice</i>>]
+
+
+
+MEAD -> {Melomel Metheglin Braggot Sack Short Bochet Hippocras}
+Melomel -> {Cyser Pyment}
+}
